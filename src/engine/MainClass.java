@@ -15,6 +15,7 @@ public class MainClass {
 
 //        MyIndexFiles indexFiles = new MyIndexFiles();
 //        indexFiles.main(params);
+
         MySearchFiles searchFiles = new MySearchFiles();
         MyResult myResult = null;
         try {
@@ -23,7 +24,7 @@ public class MainClass {
             System.out.println("myRes for Query: " + myResult.getQuery() );
             for( Document doc : myResult.getAllPages() )
             {
-                System.out.println( doc.get("path") );
+                System.out.println( doc.get("url") );
             }
 
         } catch (Exception e) {
